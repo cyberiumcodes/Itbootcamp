@@ -17,22 +17,25 @@ public class RegisterController {
             this.password = password;
             regularUser = new RegularUser(name,username,password);
 
+
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public RegisterController() {
     }
 
-    public void loginCotroller(String username, String password){
-        if (regularUser.getUsername().equals(username) && regularUser.getPassword().equals(password)){
-            regularUser.setLoged(true);
-        } else {
-            System.out.println("Wrong password!");
-        }
-    }
 
-    public boolean isLoged(){
-        return regularUser.isLoged();
-    }
 
     public RegularUser getRegularUser() {
         return regularUser;

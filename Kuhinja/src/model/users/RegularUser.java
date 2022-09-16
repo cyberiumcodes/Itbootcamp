@@ -18,8 +18,8 @@ public class RegularUser extends User implements UserLogOrReg{
         this.username = username;
         this.password = password;
         isRegisrer = true;
-        ListOfUsers.listOfUsers.put(this.getId(), this);
         setUserAtribute(UserAtribute.REGULAR);
+        ListOfUsers.listOfUsers.put(this.getId(), this);
     }
 
     public RegularUser() {

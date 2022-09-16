@@ -1,5 +1,7 @@
 package view.RegisterUser;
 
+import controllers.registerUserController.RegisterController;
+import databasse.ListOfUsers;
 import history.History;
 import view.startApp.StartApp;
 

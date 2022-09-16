@@ -19,6 +19,10 @@ public abstract class User {
     public User() {
     }
 
+    public UserAtribute getUserAtribute() {
+        return userAtribute;
+    }
+
     public Integer getId() {
         return id;
     }
