@@ -37,16 +37,9 @@ public class RegularUserMenuCotroller {
 
     }
 
-    public void buyOrBack(String unos){
-        switch (unos){
-            case "1":
-                System.out.println("buyiinh"); break;
-            case "2":
-                System.out.println("go back"); break;
-            default:
-                System.out.println("NIje validan unos");
-                break;
-        }
+
+    public void buyRecipe(String unos){
+        ListOfRecipes.listOfRecipes.get(unos).byingRecipe();
     }
 
     public void HistoryBack(){

@@ -9,7 +9,7 @@ import java.util.List;
 
 public class AdminController {
 
-     public  List<WeightIngrediant> missingWeightIngrediant = new ArrayList<>();
+     public static List<WeightIngrediant> missingWeightIngrediant = new ArrayList<>();
 
     public  List<WeightIngrediant> getMissingWeightIngrediant() {
         return missingWeightIngrediant;

@@ -7,7 +7,7 @@ import view.startApp.StartApp;
 
 public class AdminViewMenu {
     private final String headerMessage = "You are in admin menu mode:";
-    private int notifications = 0;
+    private int notifications = AdminController.missingWeightIngrediant.size();
     private final String addRecipeMeni = "1 - add recipe: ";
     private final String addWeightIngrediantMenu = "2 - refill ingrediant or add ingredinats: ";
     private final String listOfIngrediants = "3 - see list of ingredinats: ";
@@ -38,6 +38,7 @@ public class AdminViewMenu {
         System.out.println(getListOfRecipes);
         System.out.println(collectMoney);
         System.out.println(changePass);
+        System.out.println("7: to see notifications: ");
         addInputComands();
     }
 
@@ -92,6 +93,10 @@ public class AdminViewMenu {
                 case "6":
                     History.history.add(this);
                     new ChangePasswordView(admin, adminController).setupNewPassword();
+                    break;
+                case "7":
+                    History.history.add(this);
+                    new AdminNotification().printNotification();
                     break;
                 default:
                     System.out.println("Not valid input");

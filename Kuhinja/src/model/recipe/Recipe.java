@@ -1,5 +1,6 @@
 package model.recipe;
 
+import controllers.adminController.AdminController;
 import databasse.ListOfIgrediants;
 import databasse.ListOfRecipes;
 
@@ -120,6 +121,20 @@ public class Recipe implements Prieceble{
              listOfIgrediants) {
             el.setNeto(el.getNeto() / scale);
         }
+    }
+
+    public void byingRecipe(){
+        if (isAvailableEnoughIngrediants()){
+            listOfIgrediants.stream().forEach(ingrediant -> ingrediant.setNeto(ingrediant.getNeto() - ingrediant.getWeight()));
+        } else {
+            for (var el:
+                 listOfIgrediants) {
+                if (!el.isAvailableweightForRecipe()) AdminController.missingWeightIngrediant.add(el);
+            }
+        }
+
+
+
     }
 
     @Override
