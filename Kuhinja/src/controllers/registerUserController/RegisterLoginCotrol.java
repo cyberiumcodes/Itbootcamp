@@ -1,6 +1,7 @@
 package controllers.registerUserController;
 
 import databasse.ListOfUsers;
+import model.recipe.Recipe;
 import model.users.RegularUser;
 import model.users.UserAtribute;
 
@@ -41,5 +42,9 @@ public class RegisterLoginCotrol {
 
     public RegularUser getRegularUser() {
         return regularUser;
+    }
+
+    public void setListeOFFavoritesRecipies(Recipe recipe){
+        regularUser.setListOfFavoritesRecipies(recipe);
     }
 }

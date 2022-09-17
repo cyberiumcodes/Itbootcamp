@@ -1,6 +1,7 @@
 package view.recipeview;
 
 import model.recipe.Recipe;
+import model.users.RegularUser;
 
 public class RecipeView {
 
@@ -36,8 +37,15 @@ public class RecipeView {
         PrintRecipeDescription();
         printTotalPrice();
         System.out.println();
-        System.out.println("1 - kupi                 2 - nazad na listu jela");;
+        System.out.println("1 - kupi                 2 - nazad na listu jela");
+
     }
 
+    public void setFavorite(RegularUser regularUser){
+        regularUser.setListOfFavoritesRecipies(recipe);
+    }
 
+    public Recipe getRecipe() {
+        return recipe;
+    }
 }
